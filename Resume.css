@@ -7,28 +7,22 @@
 
 .resume {
   display: flex;
-  column-gap: 5%;
-  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .profile {
   background-color: #0077b6;
-  height: 100vh;
-  padding: 3%;
   color: white;
-  width: 30%;
-  position: sticky;
-  top: 0;
-}
-
-.my-details {
-  padding: 3%;
-  overflow-y: auto;
-  flex-grow: 1;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .profile-pic {
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
@@ -43,29 +37,28 @@
 
 .info {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 .info h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .info p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #f0f0f0;
 }
 
 .about-me {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 20px;
 }
 
 .about-me h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .about-me p {
@@ -74,58 +67,47 @@
   color: #f0f0f0;
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-details h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.contact-details p {
-  font-size: 1rem;
-  color: #f0f0f0;
+.my-details {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
 }
 
 .section-heading {
   background-color: #0077b6;
   color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 10px;
+  font-size: 1.3rem;
   font-weight: bold;
+  border-radius: 4px;
 }
 
 .work-history {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 20px;
 }
 
 .work-history h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .work-history p {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .work-history ul {
   list-style-type: none;
-  padding-left: 1.5rem;
+  padding-left: 20px;
 }
 
 .work-history ul li {
   font-size: 1rem;
   line-height: 1.5;
+  margin-bottom: 10px;
   position: relative;
-  margin-bottom: 0.5rem;
 }
 
 .work-history ul li::before {
@@ -133,22 +115,17 @@
   color: #0077b6;
   display: inline-block;
   width: 1em;
-  margin-right: 0.5em;
+  margin-right: 10px;
   position: absolute;
-  left: -1.5rem;
-}
-
-.education-history {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  left: -20px;
 }
 
 .skills {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
   list-style-type: none;
-  padding-left: 1.5rem;
+  padding-left: 20px;
 }
 
 .skills li {
@@ -162,7 +139,27 @@
   color: #0077b6;
   display: inline-block;
   width: 1em;
-  margin-right: 0.5em;
+  margin-right: 10px;
   position: absolute;
-  left: -1.5rem;
+  left: -20px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .resume {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  .profile {
+    width: 30%;
+    height: auto;
+    position: sticky;
+    top: 20px;
+    overflow-y: auto;
+  }
+
+  .my-details {
+    width: 65%;
+  }
 }
